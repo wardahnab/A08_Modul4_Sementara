@@ -99,7 +99,81 @@ selanjutnya dilakukan routing untuk mengenalkan subnet pada router.
 ## UML (Classless CIDR)
 
 
-Dari topologi bagi menjadi beberapa subnet dan diberi label A1 hingga terakhir
+**Jawaban**
 
 
-[!x](https://github.com/wardahnab/Jarkom_Modul4_Lapres_A08/blob/main/Gambar/cidr1.png)
+![no11](https://github.com/wardahnab/Jarkom_Modul4_Lapres_A08/blob/main/Gambar/cidr.png)
+
+
+**Revisi**
+
+
+Dari topologi bagi menjadi beberapa bagian subnet dan diberi label A1 hingga terakhir
+
+
+![no1](https://github.com/wardahnab/Jarkom_Modul4_Lapres_A08/blob/main/Gambar/cidr1.png)
+
+
+Pada setiap subnet gabung dengan subnet yang berdekatan dimulai dari subnet yang paling jauh dan diberi netmask satu tingkat lebih besar dari netmask yang paling besar di antara keduanya
+
+
+Subnet yang paling jauh adalah subnet A1 maka A1 digabung dengan subnet di dekatnya yaitu A2
+
+![no2](https://github.com/wardahnab/Jarkom_Modul4_Lapres_A08/blob/main/Gambar/cidr2.png)
+
+Subnet A1 dan subnet A2 digabung menjadi subnet B1, didapatkan netmask /21
+
+
+Hal yang sama dilakukan pada subnet yang lain sampai didapatkan satu subnet terbesar yang dimana subnet tersebut adalah topologi secara keseluruhan 
+
+
+![no3](https://github.com/wardahnab/Jarkom_Modul4_Lapres_A08/blob/main/Gambar/cidr3.png)
+
+- subnet B1 digabung dengan subnet A2 menjadi subnet C1, didapatkan netmask /20
+
+- subnet A5 dan subnet A6 digabung menjadi subnet C2, didapatkan netmask /22
+
+- subnet A12 dan subnet A13 digabung menjadi subnet C3, didapatkan netmask /20
+
+
+![no4](https://github.com/wardahnab/Jarkom_Modul4_Lapres_A08/blob/main/Gambar/cidr4.png)
+
+- subnet A4 dan subnet C2 digabung menjadi subnet D1, didapatkan netmask /21
+
+- subnet A11 dan subnet C3 digabung menjadi subnet D2, didapatkan netmask /19
+
+- subnet A10 dan subnet A9 digabung menjadi subnet D3, didapatkan netmask /21
+
+
+![no5](https://github.com/wardahnab/Jarkom_Modul4_Lapres_A08/blob/main/Gambar/cidr5.png)
+
+- subnet C1 dan subnet D1 digabung menjadi subnet E1, didapatkan netmask /19
+
+- subnet D2 dan subnet D3 digabung menjadi subnet E2, didapatkan netmask /18
+
+
+![no6](https://github.com/wardahnab/Jarkom_Modul4_Lapres_A08/blob/main/Gambar/cidr6.png)
+
+- subnet A7 dan subnet E1 digabung menjadi subnet F1, didapatkan netmask /18
+
+- subnet A8 dan subnet E2 digabung menjadi subnet F2, didapatkan netmask /17
+
+
+![no7](https://github.com/wardahnab/Jarkom_Modul4_Lapres_A08/blob/main/Gambar/cidr7.png)
+
+
+- subnet F1 dan subnet F2 digabung menjadi subnet G1, didapatkan netmask /16
+
+
+Dari pembagian subnet di atas dapat didapatkan pembagian IP dengan menggunakan susunan tree sebagai berikut
+
+
+![no10](https://github.com/wardahnab/Jarkom_Modul4_Lapres_A08/blob/main/Gambar/cidr10.png)
+
+
+Dari perhitungan didapatkan hasil nid, netmask, dan broadcast address sebagai berikut
+
+
+![no8](https://github.com/wardahnab/Jarkom_Modul4_Lapres_A08/blob/main/Gambar/cidr8.png)
+
+![no9](https://github.com/wardahnab/Jarkom_Modul4_Lapres_A08/blob/main/Gambar/cidr9.png)
