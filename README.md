@@ -102,7 +102,7 @@ selanjutnya dilakukan routing untuk mengenalkan subnet pada router.
 **Jawaban**
 
 
-![no11](https://github.com/wardahnab/Jarkom_Modul4_Lapres_A08/blob/main/Gambar/cidr.png)
+![no11](https://github.com/wardahnab/Jarkom_Modul4_Lapres_A08/blob/main/Gambar/cidr11.png)
 
 
 **Revisi**
