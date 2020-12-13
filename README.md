@@ -97,3 +97,9 @@ keterangan :
 selanjutnya dilakukan routing untuk mengenalkan subnet pada router.
 
 ## UML (Classless CIDR)
+
+
+Dari topologi bagi menjadi beberapa subnet dan diberi label A1 hingga terakhir
+
+
+[!x](https://github.com/wardahnab/Jarkom_Modul4_Lapres_A08/blob/main/Gambar/cidr1.png)
