@@ -94,7 +94,53 @@ keterangan :
 - `Subnet Mask` adalah netmask dari *Mojokerto* = 255.255.255.252
 
 #### Routing
-selanjutnya dilakukan routing untuk mengenalkan subnet pada router.
+selanjutnya dilakukan routing untuk mengenalkan subnet pada router. penambahan routing menggunakan tabel berikut.
+
+| ROUTER | SUBNET | NETMASK | NID | GATEWAY |
+|---|---|---|---|---|
+| SURABAYA |	1 |	255.255.255.240 |	192.168.0.16/28 |	192.168.0.13 |
+| - |	2 |	255.255.252.0 |	192.168.16.0/22 |	192.168.0.13 |
+| - |	3 |	255.255.252.0 |	192.168.12.0/22 |	192.168.0.13 |
+| - |	4 |	255.255.254.0 |	192.168.2.0/23 |	192.168.0.13 |
+| - |	6 |	255.255.255.252 |	192.168.0.8/30 |	192.168.0.13 |
+| - |	7 |	255.255.255.0 |	192.168.1.0/24 |	192.168.0.13 |
+| - |	8 |	255.255.252.0 |	192.168.8.0/22 |	192.168.0.6 |
+| - |	9 |	255.255.248.0 |	192.168.24.0/21 |	192.168.0.6 |
+| - |	11 |	255.255.255.252 |	192.168.0.0/30 |	192.168.0.6 |
+| - |	13 |	255.255.255.128 |	192.168.0.128/25 |	192.168.0.6 |
+| - |	MALANG |	255.255.255.252 |	10.151.73.72/30 |	192.168.0.13 |
+| PASURUAN |	0 |	0.0.0.0 |	0.0.0.0	| 192.168.0.5 |
+| - |	9 |	255.255.248.0 |	192.168.24.0/21 |	192.168.0.2 |
+| - |	13 |	255.255.255.128 |	192.168.0.128/25 |	192.168.0.2 |
+| PROBOLINGGO |	0 |	0.0.0.0 |	0.0.0.0 |	192.168.0.1 |
+| BATU |	0 |	0.0.0.0 |	0.0.0.0 |	192.168.0.14 |
+| - |	1 |	255.255.255.240 |	192.168.0.16/28 |	192.168.2.1 |
+| - |	2 |	255.255.252.0 |	192.168.16.0/22 |	192.168.0.10 |
+| - |	7 |	255.255.255.0 |	192.168.1.0/24 |	192.168.0.10 |
+| - |	MALANG |	255.255.255.252 |	10.151.73.72/30 |	192.168.0.10 |
+| KEDIRI |	0 |	0.0.0.0 |	0.0.0.0 |	192.168.0.9 |
+| - |	2 |	255.255.252.0 |	192.168.16.0/22 |	192.168.1.3 |
+| BLITAR |	0 |	0.0.0.0 |	0.0.0.0 |	192.168.1.1 |
+| MADIUN |	0 |	0.0.0.0 |	0.0.0.0 |	192.168.0.13 |
+
+contoh routing pada router **Surabaya** untuk mengenalkan kepada *A1* melalui router **Batu**. berikut konfigurasinya.
+
+![VLSM Cisco](https://github.com/wardahnab/Jarkom_Modul4_Lapres_A08/blob/main/Gambar/VLSM_9.png)
+
+keterangan :
+- `Network` adalah NID *A1* = 192.168.0.16
+- `Mask` adalah netmask dari *A1* = 255.255.255.240
+- `Next Hop` adalah IP **Batu** yang mengarah ke **Surabaya** = 192.168.0.13
+
+selanjutnya menambahkan default routing, contohnya pada router **Kediri**. berikut konfigurasinya.
+
+![VLSM Cisco](https://github.com/wardahnab/Jarkom_Modul4_Lapres_A08/blob/main/Gambar/VLSM_10.png)
+
+routing dilanjutkan untuk router-router lainnya.
+berikut adalah hasil pengiriman pesan dari topologi yang dibangun.
+
+![VLSM Cisco](https://github.com/wardahnab/Jarkom_Modul4_Lapres_A08/blob/main/Gambar/VLSM_11.png)
+
 
 ## UML (Classless CIDR)
 
